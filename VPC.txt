@@ -1,0 +1,11 @@
+VPC E SUB-REDES
+
+Tag de nome
+Bloco CIDR IPv4
+Zonas de disponibilidadezona
+    Número de sub-redes publica
+    Personalizar bloco CIDR
+        Número de sub-redes privada
+        Personalizar bloco CIDR
+            Gateway NAT
+            Endpoint
