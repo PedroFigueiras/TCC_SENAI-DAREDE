@@ -1,26 +1,51 @@
-import '../../css/estilo.css';
+import '../../css/estilo.css'
+import fundoB1 from '../../img/imgLogin/imgFundo1.png';
+import Logo from '../../img/imgLogin/darede.png'
 
 import React, {Component} from 'react';
-import {Authenticator} from 'aws-amplify';
-import {Amplify} from 'aws-amplify';
-import ReactDom from 'react-dom';
-import '@aws-amplify/ui-react/styles.css';
 
 export default class teladeLogin extends Component {
 
-  componentDidMount() {
-    Amplify.configure({
-      mandatorySingIn: true, 
-      region: 'us-east-1',
-      userPoolId: 'us-east-1_1qRVzWqRQ',
-      identityPooId:'us-east-1:334e3052-0b0d-47c2-ad6e-95c46dff48a4',
-      userPoolWebClientId: '5ugm8sdhsjpe253hsahsg4lv27'
-    })
-  }
+  
 
   render(){
     return(
-      <div> <Authenticator/> </div>
+      <div className='centro'>
+          <div className='lado1'>
+            <h1>LOGIN</h1>
+            <img className='fundob1'  src={fundoB1} alt="" />
+          </div>
+          <div >
+             <div className='digitacao'>
+                 <div className='bloco1'></div>
+                 <div className='bloco2'></div>
+                 <div className='bloco3'>
+
+                   <div>
+                   <img class="logo" src={Logo} alt="" />
+                   </div>
+
+                    <div className='estilizacaoI'>
+
+                      <p>USUARIO</p>
+                      <input type="text" />
+
+                      <p>EMAIL</p>
+                      <input type="email" />
+
+                      <p>SENHA</p>
+                      <input type="password" />
+                    </div>
+
+                    <div>
+                      <button id='botao'>Logar</button>
+                    </div>
+
+                 </div>
+            </div>
+
+          </div>
+      </div>
     )
   }
 
