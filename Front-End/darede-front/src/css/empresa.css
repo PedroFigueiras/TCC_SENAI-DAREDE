@@ -1,0 +1,143 @@
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+  }
+
+.corFundoH{
+
+    height: 60px;
+    width: 100%;
+    background-color: green;
+
+}
+
+.divisaoFundo{
+    display: flex;
+
+}
+
+.blocoInfo{
+
+    width: 300px;
+    height: 620px;
+    border-right: 2px solid #000000;border-right: 2px solid #000000;
+    
+}
+
+.posicaoI{
+
+    justify-content: center;
+    display: flex;
+
+}
+
+.selecaoLinhas{
+
+    display: flex;
+    margin: 84px 47px;
+
+}
+
+.linha{
+
+    width: 4px;
+    height: 180px;
+    background-color: #C4C4C4;
+    margin-right: 20px;
+
+}
+
+.dividirLinha{
+
+    display: flex;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.iconeU{
+
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+
+}
+
+.dividirLinha h1{
+    font-size: 15px;
+
+
+}
+
+.circuloFoto{
+
+    height: 170px;
+    width: 170px;
+    border-radius: 170px;
+    margin-top: 50px;
+
+}
+
+.corFundoF{
+
+    height: 100px;
+    width: 100%;
+    background-color: black;
+
+}
+
+/* --------------- Centro ------------------ */
+
+.blocoCentralPrincipal{
+
+    margin-left: 100px;
+    margin: 101px 370px;
+
+}
+
+
+.blocoCentral{
+
+    height: 150px;
+    width: 550px;
+    border: 2px solid #000000;
+    margin-bottom: 15px ;
+    border-radius: 10px;
+    display: flex;
+
+}
+
+.blocoCentral p{
+    font-size: 12px;
+}
+
+.blocoCentral h2{
+    font-size: 14px;
+}
+
+.informacoes{
+
+    margin-left: 8px;
+    margin-top: 15px;
+
+}
+
+.botaoEC2{
+
+    height: 20px;
+    width: 150px;
+    background-color: orange;
+
+}
+
+.letraBtn{
+
+    color: white;
+    text-transform: none;
+    text-decoration: none;
+
+}
+

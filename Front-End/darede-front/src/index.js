@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Login from './pages/login/teladeLogin'
+// import Login from './pages/login/teladeLogin'
+import ListagemEquipamentos from '././pages/empresa/listaEquipamento'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Login/>
+    <ListagemEquipamentos/>
   </React.StrictMode>,
   document.getElementById('root')
 );
