@@ -1,24 +1,42 @@
 import '../../css/empresa.css'
-import React, { Component, useState } from 'react';
+import { Component } from 'react';
 import Logo from '../../img/imgLogin/darede.png'
 import Fake from '../../img/imgCliente/iagemFake.jpg'
 import IconeUsuario from '../../img/imgCliente/iconeUsuario.png'
 import VPC from '../../img/imgCliente/VPC.png'
 import EC2 from '../../img/imgCliente/EC2.png'
-
+import prancheta from '../../img/imgCliente/prancheta.png'
+import boneco from "../../img/imgCliente/boneco_listagem.png"
+import sair from '../../img/imgCliente/sair.png'
+import localizacao from '../../img/imgCliente/localizacao.png'
+import telefone from '../../img/imgCliente/telefone.png'
+import insta from '../../img/imgCliente/instagram.png'
+import linkedin from '../../img/imgCliente/linkedin.png'
+import whats from '../../img/imgCliente/whats.png'
 
 export default class listaEquipamento extends Component {
 
 
 
     render() {
-        const [isModalVisible, setIsModalVisible] = useState(false);  
+
         return (
             <div>
 
                 <header>
                     <div className='corFundoH'>
-                        <img src={Logo} alt="" />
+
+                        <img className='logo' src={Logo} alt="" />
+                        <div className='nave'>
+                            <a href="">Meus Equipamentos</a>
+                            <a href="">Contato</a>
+                            <div className='imgHeader'></div>
+                            <img className='sair' src={sair} alt="" />
+                        </div>
+
+
+
+
                     </div>
 
 
@@ -48,22 +66,22 @@ export default class listaEquipamento extends Component {
 
 
                                     <div className='dividirLinha'>
-                                        <p >Nome:</p> <p>Pedro</p>
+                                        <h3 >Nome:</h3> <p>Pedro</p>
                                     </div>
                                     <div className='dividirLinha'>
-                                        <p>Empresa:</p> <p>Corinthians</p>
+                                        <h3>Empresa:</h3> <p>Corinthians</p>
                                     </div>
                                     <div className='dividirLinha'>
-                                        <p>Nome:</p> <p>ti@corinthians.com</p>
+                                        <h3>Nome:</h3> <p>ti@corinthians.com</p>
                                     </div>
                                     <div className='dividirLinha'>
-                                        <p>CNPJ:</p> <p>131.213.421-89</p>
+                                        <h3>CNPJ:</h3> <p>131.213.421-89</p>
                                     </div>
                                     <div className='dividirLinha'>
-                                        <p>CEL:</p> <p>11 92134-1223</p>
+                                        <h3>CEL:</h3> <p>11 92134-1223</p>
                                     </div>
                                     <div className='dividirLinha'>
-                                        <p>TEL:</p> <p>11 2752-2190</p>
+                                        <h3>TEL:</h3> <p>11 2752-2190</p>
                                     </div>
 
                                 </div>
@@ -76,26 +94,36 @@ export default class listaEquipamento extends Component {
 
                     </div>
 
+
+
+                    <div className='boneco'>
+                        <img src={boneco} alt="" />
+                    </div>
+
                     <div className='blocoCentralPrincipal'>
 
                         <div>
-
+                            <div className='divisao'>
+                                <img src={prancheta} alt="" />
+                                <h1>EQUIPAMENTOS</h1>
+                            </div>
 
 
                             <div className='blocoCentral'>
+
                                 <section >
                                     <img src={VPC} alt="" />
 
                                 </section>
 
                                 <section className='informacoes'>
-                                    <h2>EC2</h2>
+                                    <h2>VPC</h2>
                                     <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
                                     <center>
-                                        <button onClick={()=>setIsModalVisible(true)} className='botaoEC2'>
-
+                                        <button className='botaoEC2'>
+                                            <p>Mais Informções</p>
                                         </button>
-                                        {isModalVisible ? <p className='letraBtn'>Mais Informções</p> : null}
+
                                     </center>
                                 </section>
 
@@ -111,7 +139,7 @@ export default class listaEquipamento extends Component {
                                     <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
                                     <center>
                                         <button className='botaoEC2'>
-                                            <a href="" className='letraBtn'>Mais Informções</a>
+                                            <p>Mais Informções</p>
                                         </button>
                                     </center>
                                 </section>
@@ -127,6 +155,39 @@ export default class listaEquipamento extends Component {
 
                 <footer className='corFundoF'>
 
+                    <div className='divisaoF'>
+                        <div >
+                            <img className='logoF' src={Logo} alt="" />
+                            <p className='baixoL'>Nosso objetivo é oferecer inovação sustentada,
+
+                                aliando resultados e valores.</p>
+                        </div>
+
+
+                        <div className='localizacao' >
+                            <img src={localizacao} alt="" />
+                            
+                            <p>Alameda Araguaia, 2044 - Bloco 1 - CJ 210/211
+                                    06455-000 - Alphaville, Barueri
+                                    São Paulo - Brasil
+                            </p>
+                    
+                        </div>
+
+                        <div className='divisaoFD'>
+                            <img src={telefone} alt="" />
+                            <p>+55 11 3900-1010 | 3995-6919</p>
+                        </div>
+
+                        <div>
+                            <h3>Redes Sociais</h3>
+                            <div>
+                                <img src={whats} alt="" />
+                                <img src={linkedin} alt="" />
+                                <img src={insta} alt="" />
+                            </div>
+                        </div>
+                    </div>
                 </footer>
 
             </div>

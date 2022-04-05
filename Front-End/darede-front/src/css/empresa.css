@@ -2,16 +2,79 @@
     margin: 0%;
     padding: 0;
     box-sizing: border-box;
-    /* overflow: hidden; */
+    overflow: hidden;
   }
 
-.corFundoH{
+
+
+
+
+
+
+ 
+ /*               HEADER                */
+
+
+ .corFundoH{
 
     height: 60px;
     width: 100%;
     background-color: green;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 
 }
+
+.logo{
+
+    width: 143px;
+    height: 37px;
+    margin-bottom: 22px;
+
+}
+
+.nave{
+
+    display: flex;
+
+}
+
+
+.nave a{
+
+    text-transform: none;
+    text-decoration: none;
+    color: white;
+    padding-right: 25px;
+    font-size: 12px;
+    margin-top: 5px;
+
+}
+
+.imgHeader{
+
+width: 28px;
+height: 28px;
+border-radius: 20px;
+background-color: violet;
+margin-right: 20px;
+
+}
+
+.sair{
+
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+
+}
+
+
+
+ /* ................................... */
+
+
 
 .divisaoFundo{
     display: flex;
@@ -42,10 +105,11 @@
 
 .linha{
 
-    width: 4px;
-    height: 180px;
+    width: 3px;
+    height: 170px;
     background-color: #C4C4C4;
-    margin-right: 20px;
+    opacity: 10px;
+    margin-right: 15px;
 
 }
 
@@ -60,15 +124,22 @@
 
 .iconeU{
 
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     margin-bottom: 10px;
+    margin-right: 10px;
 
 }
 
 .dividirLinha h1{
     font-size: 15px;
 
+
+}
+
+.dividirLinha h3{
+    font-size: 12px;
+    margin-right: 6px;
 
 }
 
@@ -81,11 +152,14 @@
 
 }
 
-.corFundoF{
 
-    height: 100px;
-    width: 100%;
-    background-color: black;
+
+.boneco img{
+
+    justify-content: flex-start;
+    width: 100px;
+    margin-top: 375px;
+    margin-left: 13vh;
 
 }
 
@@ -94,9 +168,33 @@
 .blocoCentralPrincipal{
 
     margin-left: 100px;
-    margin: 101px 370px;
+    margin: 80px 150px;
 
 }
+
+.divisao{
+
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+
+}
+
+.divisao img{
+
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    margin-top: 5px;
+
+}
+
+.divisao h1{
+
+    font-size: 21px;
+    
+}
+
 
 
 .blocoCentral{
@@ -107,6 +205,16 @@
     margin-bottom: 15px ;
     border-radius: 10px;
     display: flex;
+
+}
+
+.blocoCentral img{
+
+    height: 80px;
+    width: 80px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 200px ;
 
 }
 
@@ -125,11 +233,24 @@
 
 }
 
+.informacoes p{
+
+    margin-bottom: 5px;
+
+}
+
 .botaoEC2{
 
     height: 20px;
     width: 150px;
-    background-color: orange;
+    background-color: #F58735;
+    border-radius: 5px;
+
+}
+
+.botaoEC2 p{
+
+     color: white;
 
 }
 
@@ -141,3 +262,63 @@
 
 }
 
+
+/* FOOTER */
+
+
+.corFundoF{
+
+    height: 150px;
+    width: 100%;
+    background-color: black;
+
+}
+
+.divisaoF{
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.divisaoFD{
+
+    margin-top: 5px;
+    display: flex;
+
+}
+
+
+.logoF{
+
+    width: 100px;
+    height: 28px;
+    margin-top: 3px;
+}
+
+.baixoL{
+
+    width: 209px;
+    margin-left: 19px;
+
+}
+
+.localizacao{
+
+    display: flex;
+    width: 200px;
+    margin-top: 22px;
+
+}
+
+.divisaoF p{
+    color: white;
+    font-size: 8px;
+}
+
+
+
+.localizacao img{
+    width: 55px;
+    height: 20px;
+}
