@@ -14,6 +14,7 @@ import insta from '../../img/imgCliente/instagram.png'
 import linkedin from '../../img/imgCliente/linkedin.png'
 import whats from '../../img/imgCliente/whats.png'
 
+
 export default class listaEquipamento extends Component {
 
 
@@ -30,7 +31,9 @@ export default class listaEquipamento extends Component {
                         <div className='nave'>
                             <a href="">Meus Equipamentos</a>
                             <a href="">Contato</a>
-                            <div className='imgHeader'></div>
+                            <section className='imgHeader'>
+                                <img className='iconeUC' src={Fake} alt="" />
+                            </section>
                             <img className='sair' src={sair} alt="" />
                         </div>
 
@@ -179,7 +182,7 @@ export default class listaEquipamento extends Component {
                             <p>+55 11 3900-1010 | 3995-6919</p>
                         </div>
 
-                        <div>
+                        <div className='divisaoFDN'>
                             <h3>Redes Sociais</h3>
                             <div>
                                 <img src={whats} alt="" />

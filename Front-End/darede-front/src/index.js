@@ -1,15 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-// import Login from './pages/login/teladeLogin'
-import ListagemEquipamentos from '././pages/empresa/listaEquipamento'
 import reportWebVitals from './reportWebVitals';
+import Login from './pages/login/teladeLogin'
+import ListaClientes from '../src/pages/funcionario/listaClientes'
+import ListagemEquipamentos from '././pages/empresa/listaEquipamento'
+
+import {
+  Routes,
+  Route,
+  BrowserRouter as Router,
+  Redirect,
+} from 'react-router-dom';
+
+const Routing = (
+  <Router>
+    <div>
+      <Routes>
+        <Route exact path="/" element={<Login/>}/>
+        <Route path="/ListaClientes" element={<ListaClientes/>}/>
+        <Route path="/ListagemEquipamentos" element={<ListagemEquipamentos/>}/>
+      </Routes>
+    </div>
+  </Router>
+)
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ListagemEquipamentos/>
-  </React.StrictMode>,
-  document.getElementById('root')
+  Routing, document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

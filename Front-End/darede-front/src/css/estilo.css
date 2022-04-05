@@ -92,6 +92,8 @@
   border-radius: 21px;
   width: 320px;
   height: 30px;
+  color: gray;
+    padding-left: 23px;
 }
 
 #botao {
