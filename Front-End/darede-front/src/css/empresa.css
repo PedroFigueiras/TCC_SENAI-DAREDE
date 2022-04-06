@@ -28,11 +28,10 @@
 
 .logo{
 
-    width: 169px;
-    height: 45px;
-    margin-bottom: 22px;
-    margin-left: 102px;
-    margin-top: 11px;
+    width: 125px;
+    height: 34px;
+    margin-bottom: 24px;
+    margin-left: 167px;
 
 }
 
@@ -85,7 +84,14 @@ margin-right: 20px;
 
  /* ................................... */
 
+ .divisaoPrin{
 
+
+    display: flex;
+    justify-content: center;
+
+
+ }
 
 .divisaoFundo{
     display: flex;
@@ -162,6 +168,7 @@ margin-right: 20px;
     width: 170px;
     border-radius: 170px;
     margin-top: 50px;
+    margin-right: 45px;
 
 }
 
@@ -259,6 +266,7 @@ margin-right: 20px;
     background-color: #F58735;
     border-radius: 5px;
     margin-top: 26px;
+    margin-right: 137px;
 
 }
 
@@ -273,6 +281,14 @@ margin-right: 20px;
     color: white;
     text-transform: none;
     text-decoration: none;
+
+}
+
+.chat{
+
+    width: 90px;
+    margin-top: 528px;
+    margin-left: 50px;
 
 }
 
