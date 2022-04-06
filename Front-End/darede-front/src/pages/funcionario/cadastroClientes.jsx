@@ -9,6 +9,7 @@ import telefone from '../../img/imgCliente/telefone.png'
 import insta from '../../img/imgCliente/instagram.png'
 import linkedin from '../../img/imgCliente/linkedin.png'
 import whats from '../../img/imgCliente/whats.png'
+import boneco from '../../img/imgFuncionarios/boneco_cadastro.png'
 
 export default class cadastroClientes extends Component {
 
@@ -128,7 +129,7 @@ export default class cadastroClientes extends Component {
                     </div>
 
                     <div>
-
+                        <img src={boneco} alt="" />
                     </div>
 
 

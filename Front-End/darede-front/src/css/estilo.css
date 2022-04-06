@@ -79,6 +79,7 @@
   justify-content: center;
   align-items: center;
   margin-left: 28px;
+  margin-top: 25px;
 }
 
 .estilizacaoI p {
@@ -95,6 +96,7 @@
   background-color: #B7B8B7 ;
   color: gray;
     padding-left: 23px;
+    
 }
 
 #botao {
