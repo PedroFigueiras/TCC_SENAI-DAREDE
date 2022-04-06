@@ -102,23 +102,48 @@ export default class cadastroClientes extends Component {
                         <p>NOME:</p>
                         <div className='parte1'>
                             <input type="text" />
-                            <div className='Circulo_redodndo'></div>
+
                         </div>
                         <p>EMAIL:</p>
                         <input className='solitarios' type="email" />
                         <div className='parte2'>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
+                            <div>
+                                <p>CPF:</p>
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <p>RG:</p>
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <p>DATA DE NASCIMENTO:</p>
+                                <input type="text" />
+                            </div>
+
                         </div>
+                        <p>ENDEREÇO:</p>
                         <input className='solitarios' type="text" />
                         <div className='parte3'>
-                            <input type="text" />
-                            <input type="text" />
+                            <div>
+                                <p>ESTADO:</p>
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <p>CIDADE:</p>
+                                <input type="text" />
+                            </div>
+
                         </div>
                         <div className='parte4'>
-                            <input type="text" />
-                            <input type="text" />
+                            <div>
+                                <p>NUMERO:</p>
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <p>CRIAR SENHA:</p>
+                                <input type="senha" />
+                            </div>
+
                         </div>
 
                         <div>
@@ -126,6 +151,10 @@ export default class cadastroClientes extends Component {
                             <button>Cancelar</button>
                         </div>
 
+                    </div>
+
+                    <div>
+                        <div className='Circulo_redodndo'></div>
                     </div>
 
                     <div>

@@ -1,3 +1,16 @@
+
+/*
+
+Como colocar barra de rolagem na div
+
+overflow-y: scroll;
+height: 619px; 
+
+
+*/
+
+
+
 /*               HEADER                */
 
 
@@ -13,7 +26,7 @@
 }
 
 .logo{
-
+    
     width: 125px;
     height: 34px;
     margin-bottom: 24px;
@@ -182,8 +195,9 @@ margin-right: 20px;
 }
 
 .parte1 input{
-    width: 800px;
+    width: 650px;
     height: 30px;
+    margin-top: 5px;
 }
 
 .Circulo_redodndo{
@@ -192,27 +206,51 @@ margin-right: 20px;
     height: 150px;
     border-radius: 100px;
     background-color: #C4C4C4;
+    position: relative;
 
 }
 
 .solitarios{
 
-    width: 500px;
+    width: 800px;
     height: 30px;
+    margin-top: 5px;
 
+}
+
+.parte2{
+    display: flex; 
+   
+}
+
+.parte3{
+    display: flex; 
+   
+}
+
+.parte4{
+    display: flex; 
+  
 }
 
 .parte2 input{
-    width: 500px;
+    width: 265px;
     height: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
+
 }
 
 .parte3 input{
-    width: 500px;
+    width: 265px;
     height: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 
 .parte4 input{
-    width: 500px;
+    width: 265px;
     height: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
 }

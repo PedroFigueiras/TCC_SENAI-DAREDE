@@ -187,10 +187,40 @@ margin-right: 20px;
 
 .blocoCentralPrincipal{
 
-    margin-left: 100px;
     margin: 80px 150px;
 
+
+    /* 
+    
+    Colocar Barra de Rolagem
+    
+    overflow-y: scroll;
+    height: 619px;  
+    
+    */
+
+
 }
+
+/* .blocoCentralPrincipal::-webkit-scrollbar{
+
+     tamanho 
+
+} */
+
+/* .blocoCentralPrincipal::-webkit-scrollbar-thumb{
+
+    barrinha de rolagem
+
+
+} */
+
+/* .blocoCentralPrincipal::-webkit-scrollbar-track{
+
+    fundo da barra
+
+
+} */
 
 .divisao{
 
