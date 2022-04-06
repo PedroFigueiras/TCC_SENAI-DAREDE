@@ -10,8 +10,8 @@ export default class teladeLogin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        email: 'pedro@corinthians.com',
-        senha: '1234',
+        email: '',
+        senha: '',
         erroMensagem: '',
         isLoading: false,
     };
@@ -43,15 +43,14 @@ efetuaLogin = (event) => {
 
           console.log(base64)
 
-        //   if (parseJwt().role === '1') {
-
-        //     this.props.history.push('/listarconsulta');
-        //     console.log('logado: ' + usuarioAutenticado());
-        //   } else if (parseJwt().role === '2') {
-        //     this.props.history.push('/listarmedicos');
-        //   } else {
-        //     this.props.history.push('/listarminhas');
-        //   }
+          // if (parseJwt().role === '1') {
+          //   this.props.history.push('/listarconsulta');
+          //   console.log('logado: ' + usuarioAutenticado());
+          // } else if (parseJwt().role === '2') {
+          //   this.props.history.push('/listarmedicos');
+          // } else {
+          //   this.props.history.push('/listarminhas');
+          // }
         }
       })
 

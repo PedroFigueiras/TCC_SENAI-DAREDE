@@ -4,6 +4,8 @@ import reportWebVitals from './reportWebVitals';
 import Login from './pages/login/teladeLogin'
 import ListaClientes from '../src/pages/funcionario/listaClientes'
 import ListagemEquipamentos from '././pages/empresa/listaEquipamento'
+import CadastroCliente from './pages/funcionario/cadastroClientes'
+
 
 import {
   Routes,
@@ -19,6 +21,7 @@ const Routing = (
         <Route exact path="/" element={<Login/>}/>
         <Route path="/ListaClientes" element={<ListaClientes/>}/>
         <Route path="/ListagemEquipamentos" element={<ListagemEquipamentos/>}/>
+        <Route path="/cadastroCliente" element={<CadastroCliente/>}/>
       </Routes>
     </div>
   </Router>
