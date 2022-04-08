@@ -13,10 +13,10 @@ import telefone from '../../img/imgCliente/telefone.png'
 import insta from '../../img/imgCliente/instagram.png'
 import linkedin from '../../img/imgCliente/linkedin.png'
 import whats from '../../img/imgCliente/whats.png'
-import chatboot from '../../img/imgCliente/icone_chat.png'
+import novo from '../../img/imgCliente/b_novo.png'
 
 
-export default class listaEquipamento extends Component {
+export default class meusEquipamentos extends Component {
 
    
 
@@ -31,12 +31,13 @@ export default class listaEquipamento extends Component {
 
                         <img className='logo' src={Logo} alt="" />
                         <div className='nave'>
-                            <a href="/MeusEquipamentos">Meus Equipamentos</a>
+                            <a href="/ListagemEquipamentos">Listar Equipamentos</a>
                             <a href="">Contato</a>
                             <section className='imgHeader'>
                                 <img className='iconeUC' src={Fake} alt="" />
                             </section>
                             <a href="/" target="principal" ><img className='sair' src={sair} alt="" /></a>
+                            
                         </div>
 
 
@@ -46,7 +47,7 @@ export default class listaEquipamento extends Component {
 
 
                 </header>
-                <div className='divisaoPrinc2'>
+                <div className='divisaoPrinc'>
                     <div className='divisaoFundo'>
 
 
@@ -101,8 +102,8 @@ export default class listaEquipamento extends Component {
 
 
 
-                        <div className='boneco'>
-                            <img src={boneco} alt="" />
+                        <div className='boneco2'>
+                            <img src={novo} alt="" />
                         </div>
 
                         <div className='blocoCentralPrincipal'>
@@ -110,7 +111,7 @@ export default class listaEquipamento extends Component {
                             <div>
                                 <div className='divisao'>
                                     <img src={prancheta} alt="" />
-                                    <h1>EQUIPAMENTOS</h1>
+                                    <h1>MEUS EQUIPAMENTOS</h1>
                                 </div>
 
 
@@ -126,11 +127,13 @@ export default class listaEquipamento extends Component {
                                         <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
                                         <center>
                                             <button className='botaoEC2'>
-                                                <p>Mais Informções</p>
+                                                <p>Detalhes do Uso</p>
                                             </button>
 
                                         </center>
                                     </section>
+
+                                    <div className='bloquinho'></div>
 
                                 </div>
 
@@ -144,10 +147,12 @@ export default class listaEquipamento extends Component {
                                         <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
                                         <center>
                                             <button className='botaoEC2'>
-                                                <p>Mais Informções</p>
+                                                <p>Detalhes do Uso</p>
                                             </button>
                                         </center>
                                     </section>
+
+                                    <div className='bloquinho2'></div>
 
                                 </div>
 
@@ -160,9 +165,7 @@ export default class listaEquipamento extends Component {
 
                         </div>
 
-                        <div>
-                            <img className='chat' src={chatboot} alt="" />
-                        </div>
+                
                     </div>
 
                 </div>
@@ -207,6 +210,4 @@ export default class listaEquipamento extends Component {
             </div>
         )
     }
-
 }
-

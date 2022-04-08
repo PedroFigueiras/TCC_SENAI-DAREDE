@@ -81,7 +81,7 @@ export default class teladeLogin extends Component {
                 <input input value={this.state.senha} onChange={this.atualizaStateCampo} class="inputS" type="password"  name="senha" />
               </div>
               <div>
-                  {
+                  {/* {
                     this.state.isLoading === true && <button  id="botao"> Loading </button>
                   }
 
@@ -90,7 +90,11 @@ export default class teladeLogin extends Component {
                       disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''} >
                       Logar
                     </button>
-                  }
+                  } */}
+
+                  <button id="botao">
+                    <a className='letraBtn' href="/ListagemEquipamentos">Logar</a>
+                  </button>
                 </div>
 
             </div>
