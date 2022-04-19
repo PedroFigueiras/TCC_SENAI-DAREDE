@@ -33,9 +33,30 @@ export default class teladeLogin extends Component {
       .then((resposta) => {
         if (resposta.status === 200) {
 
-          localStorage.setItem('usuario-login', resposta.data.token);
-          this.setState({ isLoading: false });
-          this.setState({ redirectTo: "/Listagem" });
+          if (resposta.status === 200) {
+
+            localStorage.setItem('usuario-login', resposta.data.token);
+            this.setState({ isLoading: false })
+  
+            let base64 = localStorage.getItem('usuario-login').split('.')[1];
+  
+  
+            console.log(base64)
+  
+            if (parseJwt().role === '1') {
+  
+              this.props.history.push('/listarconsulta');
+              console.log('logado: ' + usuarioAutenticado());
+            } else if (parseJwt().role === '2') {
+              this.props.history.push('/listarmedicos');
+            } else {
+              this.props.history.push('/listarminhas');
+            }
+          }
+
+          // localStorage.setItem('usuario-login', resposta.data.token);
+          // this.setState({ isLoading: false });
+          // this.setState({ redirectTo: "/Listagem" });
         }
       })
 
@@ -81,7 +102,7 @@ export default class teladeLogin extends Component {
                 <input input value={this.state.senha} onChange={this.atualizaStateCampo} class="inputS" type="password"  name="senha" />
               </div>
               <div>
-                  {/* {
+                  {
                     this.state.isLoading === true && <button  id="botao"> Loading </button>
                   }
 
@@ -90,11 +111,11 @@ export default class teladeLogin extends Component {
                       disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''} >
                       Logar
                     </button>
-                  } */}
+                  }
 
-                  <button id="botao">
+                  {/* <button id="botao">
                     <a className='letraBtn' href="/ListagemEquipamentos">Logar</a>
-                  </button>
+                  </button> */}
                 </div>
 
             </div>
