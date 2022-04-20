@@ -1,130 +1,168 @@
 import '../../css/estilo.css'
 import fundoB1 from '../../img/imgLogin/imgFundo1.png';
-import Logoo from '../../img/imgLogin/darede.png'
-import axios from 'axios';
+import Logoo from '../../img/imgLogin/darede.png';
+import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
+import React, { Component, useState } from 'react';
+import { useNavigate } from 'react-router';
+import UserPool from '../../components/UserPool';
 
-import React, { Component } from 'react';
-
-export default class teladeLogin extends Component {
-
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: '',
-      senha: '',
-      erroMensagem: '',
-      isLoading: false,
-      redirectTo: null,
-    };
-  }
+// export default class teladeLogin extends Component {
 
 
-  efetuaLogin = (event) => {
-    event.preventDefault();
-    console.log('logando')
-    this.setState({ erroMensagem: '', isLoading: true });
+// constructor(props) {
+//   super(props);
+//   this.state = {
+//     email: '',
+//     senha: '',
+//     erroMensagem: '',
+//     isLoading: false,
+//     redirectTo: null,
+//   };
+// }
 
-    axios.post('http://localhost:5000/api/Login', {
-      email: this.state.email,
-      senha: this.state.senha,
+
+// efetuaLogin = (event) => {
+//   event.preventDefault();
+//   console.log('logando')
+//   this.setState({ erroMensagem: '', isLoading: true });
+
+//   axios.post('http://localhost:5000/api/Login', {
+//     email: this.state.email,
+//     senha: this.state.senha,
+//   })
+
+//     .then((resposta) => {
+//       if (resposta.status === 200) {
+
+//         if (resposta.status === 200) {
+
+//           localStorage.setItem('usuario-login', resposta.data.token);
+//           this.setState({ isLoading: false })
+
+//           let base64 = localStorage.getItem('usuario-login').split('.')[1];
+
+
+//           console.log(base64)
+
+//           if (parseJwt().role === '1') {
+
+//             this.props.history.push('/listarconsulta');
+//             console.log('logado: ' + usuarioAutenticado());
+//           } else if (parseJwt().role === '2') {
+//             this.props.history.push('/listarmedicos');
+//           } else {
+//             this.props.history.push('/listarminhas');
+//           }
+//         }
+
+//         // localStorage.setItem('usuario-login', resposta.data.token);
+//         // this.setState({ isLoading: false });
+//         // this.setState({ redirectTo: "/Listagem" });
+//       }
+//     })
+
+//     .catch(() => {
+//       this.setState({
+//         erroMensagem: 'E-mail ou senha inválidos, corrija NOVAMENTE',
+//         isLoading: false,
+//       });
+//     });
+
+// }
+
+// atualizaStateCampo = (campo) => {
+//   this.setState({ [campo.target.name]: campo.target.value });
+// };
+
+
+export default function Login() {
+
+  const [email, setEmail] = useState("")
+  const [senha, setSenha] = useState("")
+  const [msg, setMsg] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
+
+
+  const efetuarLogin = (e) => {
+
+    e.preventDefault();
+    setLoading(true)
+
+    const user = new CognitoUser({
+
+      Username: email,
+      Pool: UserPool,
+
+    });
+
+    const authDetails = new AuthenticationDetails({
+
+      Username: email,
+      Password: senha,
+
+
     })
 
-      .then((resposta) => {
-        if (resposta.status === 200) {
+    user.authenticateUser(authDetails, {
+      onSuccess: (data) => {
+        setLoading(false)
+        console.log("onSuccess: ", data);
+        navigate("/MeusEquipamentos")
+      },
 
-          if (resposta.status === 200) {
+      onFailure: (err) => {
+        setLoading(false)
+        setMsg(true)
+        console.error("onFailure: ", err);
+      },
 
-            localStorage.setItem('usuario-login', resposta.data.token);
-            this.setState({ isLoading: false })
-  
-            let base64 = localStorage.getItem('usuario-login').split('.')[1];
-  
-  
-            console.log(base64)
-  
-            if (parseJwt().role === '1') {
-  
-              this.props.history.push('/listarconsulta');
-              console.log('logado: ' + usuarioAutenticado());
-            } else if (parseJwt().role === '2') {
-              this.props.history.push('/listarmedicos');
-            } else {
-              this.props.history.push('/listarminhas');
-            }
-          }
+      
 
-          // localStorage.setItem('usuario-login', resposta.data.token);
-          // this.setState({ isLoading: false });
-          // this.setState({ redirectTo: "/Listagem" });
-        }
-      })
-
-      .catch(() => {
-        this.setState({
-          erroMensagem: 'E-mail ou senha inválidos, corrija NOVAMENTE',
-          isLoading: false,
-        });
-      });
+    });
 
   }
 
-  atualizaStateCampo = (campo) => {
-    this.setState({ [campo.target.name]: campo.target.value });
-  };
 
+  return (
+    <div className='centro'>
+      <div className='lado1'>
+        <h1>LOGIN</h1>
+        <img className='fundob1' src={fundoB1} alt="" />
+      </div>
+      <div >
+        <div className='digitacao'>
+          <div className='bloco1'></div>
+          <div className='bloco2'></div>
+          <div className='bloco3'>
 
+            <div>
+              <img class="logoo" src={Logoo} alt="" />
+            </div>
 
+            <div className='estilizacaoI'>
 
-  render() {
-    return (
-      <div className='centro'>
-        <div className='lado1'>
-          <h1>LOGIN</h1>
-          <img className='fundob1' src={fundoB1} alt="" />
-        </div>
-        <div >
-          <div className='digitacao'>
-            <div className='bloco1'></div>
-            <div className='bloco2'></div>
-            <div className='bloco3'>
+              <p>EMAIL</p>
+              <input type="email" id="email" value={(email)} onChange={(e) => setEmail(e.target.value)}></input>
 
-              <div>
-                <img class="logoo" src={Logoo} alt="" />
-              </div>
+              <p>SENHA</p>
+              <input input value={senha} onChange={(e) => setSenha(e.target.value)} class="inputS" type="password" name="senha" />
+            </div>
+            <div>
+              {
+                loading === true && <button type='submit' disabled id="botao"> Loading </button>
+              }
 
-              <div className='estilizacaoI'>
-
-                <p>EMAIL</p>
-                <input value={this.state.email} onChange={this.atualizaStateCampo}  type="text" name="email" />
-
-                <p>SENHA</p>
-                <input input value={this.state.senha} onChange={this.atualizaStateCampo} class="inputS" type="password"  name="senha" />
-              </div>
-              <div>
-                  {
-                    this.state.isLoading === true && <button  id="botao"> Loading </button>
-                  }
-
-                  {
-                    this.state.isLoading === false && <button id="botao" type="submit"
-                      disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''} >
-                      Logar
-                    </button>
-                  }
-
-                  {/* <button id="botao">
-                    <a className='letraBtn' href="/ListagemEquipamentos">Logar</a>
-                  </button> */}
-                </div>
-
+              {
+                loading === false && <button id="botao" type="submit">
+                  Logar
+                </button>
+              }
             </div>
           </div>
-
         </div>
       </div>
-    )
-  }
+    </div>
 
-}
-
+      )
+};
