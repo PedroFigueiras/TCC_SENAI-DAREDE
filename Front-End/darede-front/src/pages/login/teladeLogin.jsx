@@ -4,6 +4,8 @@ import Logoo from '../../img/imgLogin/darede.png';
 import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
 import React, { Component, useState } from 'react';
 import { useNavigate } from 'react-router';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import UserPool from '../../components/UserPool';
 
 // export default class teladeLogin extends Component {
@@ -77,7 +79,7 @@ import UserPool from '../../components/UserPool';
 
 export default function Login() {
 
-  const [email, setEmail] = useState("")
+  const [name, setName] = useState("")
   const [senha, setSenha] = useState("")
   const [msg, setMsg] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -85,24 +87,18 @@ export default function Login() {
 
 
   const efetuarLogin = (e) => {
-
     e.preventDefault();
     setLoading(true)
 
     const user = new CognitoUser({
-
-      Username: email,
+      Username: name,
       Pool: UserPool,
-
     });
 
     const authDetails = new AuthenticationDetails({
-
-      Username: email,
+      Username: name,
       Password: senha,
-
-
-    })
+    });
 
     user.authenticateUser(authDetails, {
       onSuccess: (data) => {
@@ -110,19 +106,15 @@ export default function Login() {
         console.log("onSuccess: ", data);
         navigate("/MeusEquipamentos")
       },
-
       onFailure: (err) => {
         setLoading(false)
         setMsg(true)
         console.error("onFailure: ", err);
+        toast.error("Login Invalido")
       },
-
-      
-
     });
 
   }
-
 
   return (
     <div className='centro'>
@@ -135,34 +127,35 @@ export default function Login() {
           <div className='bloco1'></div>
           <div className='bloco2'></div>
           <div className='bloco3'>
-
             <div>
               <img class="logoo" src={Logoo} alt="" />
             </div>
-
             <div className='estilizacaoI'>
 
-              <p>EMAIL</p>
-              <input type="email" id="email" value={(email)} onChange={(e) => setEmail(e.target.value)}></input>
+              <form onSubmit={efetuarLogin}>
+                <p>EMAIL</p>
+                <input type="name" id="name" value={(name)} onChange={(e) => setName(e.target.value)}></input>
 
-              <p>SENHA</p>
-              <input input value={senha} onChange={(e) => setSenha(e.target.value)} class="inputS" type="password" name="senha" />
+                <p>SENHA</p>
+                <input type="password" input value={senha} onChange={(e) => setSenha(e.target.value)} class="inputS" name="senha" />
+                <button type='submit'>Login</button>
+              </form>
+
             </div>
-            <div>
+            <ToastContainer/>
+            {/* <div>
               {
                 loading === true && <button type='submit' disabled id="botao"> Loading </button>
               }
-
               {
                 loading === false && <button id="botao" type="submit">
                   Logar
                 </button>
               }
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
     </div>
-
-      )
+  )
 };
