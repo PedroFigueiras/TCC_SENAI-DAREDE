@@ -104,6 +104,23 @@ export default function Login() {
       onSuccess: (data) => {
         setLoading(false)
         console.log("onSuccess: ", data);
+
+        
+
+        //   let base64 = localStorage.getItem('usuario-login').split('.')[1];
+
+        //   console.log(base64)
+
+        // if (parseJwt().role === '1') {
+
+        //   this.props.history.push('/listarconsulta');
+        //   console.log('logado: ' + authenticateUser());
+        // } else if (parseJwt().role === '2') {
+        //   this.props.history.push('/listarmedicos');
+        // } else {
+        //   this.props.history.push('/listarminhas');
+        // }
+
         navigate("/MeusEquipamentos")
       },
       onFailure: (err) => {
@@ -113,7 +130,7 @@ export default function Login() {
         toast.error("Login Invalido")
       },
     });
-
+    user.getSignInUserSession();
   }
 
   return (
@@ -133,7 +150,7 @@ export default function Login() {
             <div className='estilizacaoI'>
 
               <form onSubmit={efetuarLogin}>
-                <p>EMAIL</p>
+                <p>EMAIL / USUARIO</p>
                 <input type="name" id="name" value={(name)} onChange={(e) => setName(e.target.value)}></input>
 
                 <p>SENHA</p>
@@ -142,7 +159,7 @@ export default function Login() {
               </form>
 
             </div>
-            <ToastContainer/>
+            <ToastContainer />
             {/* <div>
               {
                 loading === true && <button type='submit' disabled id="botao"> Loading </button>

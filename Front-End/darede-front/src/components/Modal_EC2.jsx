@@ -47,12 +47,6 @@ const Modal_EC2 = () => {
 
                 </div>
 
-
-
-
-
-
-
             </div>
 
         </div>
