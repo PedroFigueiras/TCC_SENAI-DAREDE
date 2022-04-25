@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import Login from './pages/login/teladeLogin'
 import ListaClientes from '../src/pages/funcionario/listaClientes'
-import ListagemEquipamentos from '././pages/empresa/listaEquipamento'
+import ListagemEquipamentos from './pages/testes/listaEquipamento'
 import CadastroCliente from './pages/funcionario/cadastroClientes'
 import MeusEquipamentos from './pages/empresa/meusEquipamentos';
+import App from './pages/empresa/listagemEquipamentos';
 
 
 import {
@@ -21,9 +22,9 @@ const Routing = (
       <Routes>
         <Route exact path="/" element={<Login/>}/>
         <Route path="/ListaClientes" element={<ListaClientes/>}/>
-        <Route path="/ListagemEquipamentos" element={<ListagemEquipamentos/>}/>
         <Route path="/MeusEquipamentos" element={<MeusEquipamentos/>}/>
         <Route path="/cadastroCliente" element={<CadastroCliente/>}/>
+        <Route path="/ListagemEquipamentos" element={<App/>}></Route>
       </Routes>
     </div>
   </Router>

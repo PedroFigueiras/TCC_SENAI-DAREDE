@@ -138,7 +138,7 @@ export default function Login() {
 
                 <p>SENHA</p>
                 <input type="password" input value={senha} onChange={(e) => setSenha(e.target.value)} class="inputS" name="senha" />
-                <button type='submit'>Login</button>
+                <button id="botao" type='submit'>Login</button>
               </form>
 
             </div>
