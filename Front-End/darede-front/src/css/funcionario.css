@@ -99,8 +99,8 @@ margin-right: 20px;
 
 .blocoInfo{
 
-    width: 300px;
-    height: 620px;
+    width: 288px;
+    height: 665px;
     border-right: 2px solid #000000;border-right: 2px solid #000000;
     
 }
@@ -198,6 +198,10 @@ margin-right: 20px;
     width: 650px;
     height: 30px;
     margin-top: 5px;
+    margin-bottom: 17px;
+    border-radius: 5px;
+    border: 2px solid gray; 
+    box-shadow: 7px 6px 11px #a6abbd;
 }
 
 .Circulo_redodndo{
@@ -215,6 +219,20 @@ margin-right: 20px;
     width: 800px;
     height: 30px;
     margin-top: 5px;
+    margin-bottom: 17px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 7px 6px 11px #a6abbd;
+}
+.solitarioss{
+
+    width: 650px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 17px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 7px 6px 11px #a6abbd;
 
 }
 
@@ -234,23 +252,45 @@ margin-right: 20px;
 }
 
 .parte2 input{
-    width: 265px;
+    width: 263px;
     height: 30px;
     margin-top: 5px;
     margin-right: 5px;
+    margin-bottom: 11px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 7px 6px 11px #a6abbd;
+    
+    
 
 }
 
 .parte3 input{
-    width: 265px;
+    width: 398px;
     height: 30px;
     margin-top: 5px;
     margin-right: 5px;
+    margin-bottom: 11px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 7px 6px 11px #a6abbd;
+    
 }
 
 .parte4 input{
-    width: 265px;
+    width: 398px;
     height: 30px;
     margin-top: 5px;
     margin-right: 5px;
+    margin-bottom: 11px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 7px 6px 11px #a6abbd;
+    
+}
+
+
+.LADO{
+    margin-top: 19px;
+    margin-left: 266px;
 }

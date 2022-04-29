@@ -24,7 +24,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
-    const[isModalVisible, setIsModalVisible] = useState(false);
+    const[isModalVisibleVPC, setIsModalVisibleVPC] = useState(false);
+    const[isModalVisibleEC2, setIsModalVisibleEC2] = useState(false);
 
     return(
 
@@ -74,14 +75,12 @@ function App() {
                                 </div>
 
 
-                                <div className='dividirLinha'>
-                                    <h3 >Nome:</h3> <p>Pedro</p>
-                                </div>
+                                
                                 <div className='dividirLinha'>
                                     <h3>Empresa:</h3> <p>Corinthians</p>
                                 </div>
                                 <div className='dividirLinha'>
-                                    <h3>Nome:</h3> <p>ti@corinthians.com</p>
+                                    <h3>email:</h3> <p>ti@corinthians.com</p>
                                 </div>
                                 <div className='dividirLinha'>
                                     <h3>CNPJ:</h3> <p>131.213.421-89</p>
@@ -89,9 +88,7 @@ function App() {
                                 <div className='dividirLinha'>
                                     <h3>CEL:</h3> <p>11 92134-1223</p>
                                 </div>
-                                <div className='dividirLinha'>
-                                    <h3>TEL:</h3> <p>11 2752-2190</p>
-                                </div>
+                                
 
                             </div>
                         </section>
@@ -130,8 +127,8 @@ function App() {
                                 <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
                                 <center>
                                     <div>
-                                        <button onClick={() => setIsModalVisible(true)} className='botaoEC2'> Mais Informações</button>
-                                        {isModalVisible ? <Modal_VPC onClose={() => setIsModalVisible(false) } />: null}
+                                        <button onClick={() => setIsModalVisibleVPC(true)} className='botaoEC2'> Mais Informações</button>
+                                        {isModalVisibleVPC ? <Modal_VPC onClose={() => setIsModalVisibleVPC(false) } />: null}
                                     </div>
 
                                 </center>
@@ -149,8 +146,8 @@ function App() {
                                 <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
                                 <center>
                                 <div>
-                                        <button onClick={() => setIsModalVisible(true)} className='botaoEC2'> Mais Informações</button>
-                                        {isModalVisible ? <h1></h1>: null}
+                                        <button onClick={() => setIsModalVisibleEC2(true)} className='botaoEC22'> Mais Informações</button>
+                                        {isModalVisibleEC2 ? <Modal_EC2 onClose={() => setIsModalVisibleEC2(false) } />: null}
                                     </div>
                                 </center>
                             </section>
