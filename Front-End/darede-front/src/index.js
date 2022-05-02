@@ -8,6 +8,7 @@ import CadastroCliente from './pages/funcionario/cadastroClientes'
 import MeusEquipamentos from './pages/empresa/meusEquipamentos';
 import CadastroFuncionario from './pages/administardor/cadastroFuncionario';
 import App from './pages/empresa/listagemEquipamentos';
+import { UsuarioAutenticado, TokenConvertido  } from "./services/auth.js";
 
 
 import {

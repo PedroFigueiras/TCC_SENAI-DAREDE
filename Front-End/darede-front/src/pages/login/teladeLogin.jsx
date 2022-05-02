@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import UserPool from '../../components/UserPool';
+import { TokenConvertido, UsuarioAutenticado } from '../../services/auth';
 
 // export default class teladeLogin extends Component {
 
@@ -105,21 +106,23 @@ export default function Login() {
         setLoading(false)
         console.log("onSuccess: ", data);
 
+        var toke = "CognitoIdentityServiceProvider.1g36b2sqgdauaqc1ni5q6vel2b."+ UserPool.getCurrentUser().getUsername() +".idToken"
+        console.log(TokenConvertido())
         
-
+        // console.log(toke)
         //   let base64 = localStorage.getItem('usuario-login').split('.')[1];
-
+        
         //   console.log(base64)
 
-        // if (parseJwt().role === '1') {
+        if (TokenConvertido().CognitoUser === 'Funcionarios') {
 
-        //   this.props.history.push('/listarconsulta');
-        //   console.log('logado: ' + authenticateUser());
-        // } else if (parseJwt().role === '2') {
-        //   this.props.history.push('/listarmedicos');
-        // } else {
-        //   this.props.history.push('/listarminhas');
-        // }
+        this.props.history.push('/MeusEquipamentos');
+          console.log('logado: ' + UsuarioAutenticado());
+        } else if (TokenConvertido().role === '2') {
+          this.props.history.push('/ListaClientes');
+        } else {
+          this.props.history.push('/CadastroFuncionario');
+        }
 
         navigate("/MeusEquipamentos")
       },

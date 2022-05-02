@@ -32,7 +32,9 @@ function CadastroFuncionario() {
                         <section className='imgHeader'>
                             <img className='iconeUC' src={imgAdm} alt="" />
                         </section>
-                        <a href="/" target="principal" ><img className='sair' src={sair} alt="" /></a>
+                        <a href="/" target="principal" ><img className='sair' src={sair} alt="" />
+                            
+                        </a>
                     </div>
 
 
