@@ -1,12 +1,14 @@
 import '../../css/estilo.css'
 import fundoB1 from '../../img/imgLogin/imgFundo1.png';
 import Logoo from '../../img/imgLogin/darede.png';
-import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
+import { CognitoUser, AuthenticationDetails, CognitoAccessToken } from 'amazon-cognito-identity-js';
 import React, { Component, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import UserPool from '../../components/UserPool';
+import { parseJwt, usuarioAutenticado } from '../../token/token';
+import { urlSafeEncode } from '@aws-amplify/core';
 
 // export default class teladeLogin extends Component {
 
@@ -79,8 +81,9 @@ import UserPool from '../../components/UserPool';
 
 export default function Login() {
 
-  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
   const [senha, setSenha] = useState("")
+  const [AccessToken, setAccessToken] = useState("");
   const [msg, setMsg] = useState(false)
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
@@ -91,37 +94,40 @@ export default function Login() {
     setLoading(true)
 
     const user = new CognitoUser({
-      Username: name,
+      Username: email,
       Pool: UserPool,
     });
 
+    const token = new CognitoAccessToken({
+      jwttoken: AccessToken
+    });
+
     const authDetails = new AuthenticationDetails({
-      Username: name,
+      Username: email,
       Password: senha,
     });
 
     user.authenticateUser(authDetails, {
       onSuccess: (data) => {
         setLoading(false)
-        console.log("onSuccess: ", data);
+        console.log('logado1')
+        // user.getUserAttributes().then((res) => {
+        //   const payload = res.getIdToken().decodePayload()
+        //   const isAdmin = payload["cognito:groups"] && payload["cognito:groups"].includes("Funcionarios")
+        //   this.setState({ isAdmin })
+        //})
 
-        
-
-        //   let base64 = localStorage.getItem('usuario-login').split('.')[1];
-
-        //   console.log(base64)
-
-        // if (parseJwt().role === '1') {
-
-        //   this.props.history.push('/listarconsulta');
-        //   console.log('logado: ' + authenticateUser());
-        // } else if (parseJwt().role === '2') {
-        //   this.props.history.push('/listarmedicos');
-        // } else {
-        //   this.props.history.push('/listarminhas');
-        // }
-
-        navigate("/MeusEquipamentos")
+        if (parseJwt().role === 'Funcionarios') {
+          navigate('/MeusEquipamentos');
+          console.log('logado: ' + usuarioAutenticado());
+        } else if (parseJwt().role === 'Clientes') {
+          navigate('/ListaClientes');
+          console.log('logado: ' + usuarioAutenticado());
+        } else {
+          navigate('/listarminhas');
+          console.log('logado: ' + usuarioAutenticado());
+        }
+        // navigate("/MeusEquipamentos")
       },
       onFailure: (err) => {
         setLoading(false)
@@ -151,7 +157,7 @@ export default function Login() {
 
               <form onSubmit={efetuarLogin}>
                 <p>EMAIL / USUARIO</p>
-                <input type="name" id="name" value={(name)} onChange={(e) => setName(e.target.value)}></input>
+                <input type="name" id="name" value={(email)} onChange={(e) => setEmail(e.target.value)}></input>
 
                 <p>SENHA</p>
                 <input type="password" input value={senha} onChange={(e) => setSenha(e.target.value)} class="inputS" name="senha" />
