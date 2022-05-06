@@ -1,8 +1,6 @@
 import UserPool from "../components/UserPool.jsx";
-var toke = "CognitoIdentityServiceProvider.1g36b2sqgdauaqc1ni5q6vel2b."+ UserPool.getCurrentUser().getUsername() +".idToken"
+var toke = "CognitoIdentityServiceProvider.1g36b2sqgdauaqc1ni5q6vel2b."+ UserPool.getCurrentUser() +".idToken";
 export const UsuarioAutenticado = () => {
-    
- 
     if (localStorage.getItem(toke) !== null) {
         return true;
     }
