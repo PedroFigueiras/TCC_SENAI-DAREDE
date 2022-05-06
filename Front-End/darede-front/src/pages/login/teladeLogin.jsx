@@ -114,15 +114,15 @@ export default function Login() {
         
         //   console.log(base64)
 
-        if (TokenConvertido().CognitoUser === 'Funcionarios') {
+        // if (TokenConvertido().CognitoUser === 'Funcionarios') {
 
-        this.props.history.push('/MeusEquipamentos');
-          console.log('logado: ' + UsuarioAutenticado());
-        } else if (TokenConvertido().role === '2') {
-          this.props.history.push('/ListaClientes');
-        } else {
-          this.props.history.push('/CadastroFuncionario');
-        }
+        // this.props.history.push('/MeusEquipamentos');
+        //   console.log('logado: ' + UsuarioAutenticado());
+        // } else if (TokenConvertido().role === '2') {
+        //   this.props.history.push('/ListaClientes');
+        // } else {
+        //   this.props.history.push('/CadastroFuncionario');
+        // }
 
         navigate("/MeusEquipamentos")
       },

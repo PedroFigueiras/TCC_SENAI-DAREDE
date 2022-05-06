@@ -173,37 +173,7 @@ function App() {
         <footer className='corFundoF'>
 
             <div className='divisaoF'>
-                <div >
-                    <img className='logoF' src={Logo} alt="" />
-                    <p className='baixoL'>Nosso objetivo é oferecer inovação sustentada,
-
-                        aliando resultados e valores.</p>
-                </div>
-
-
-                <div className='localizacao' >
-                    <img src={localizacao} alt="" />
-
-                    <p>Alameda Araguaia, 2044 - Bloco 1 - CJ 210/211
-                        06455-000 - Alphaville, Barueri
-                        São Paulo - Brasil
-                    </p>
-
-                </div>
-
-                <div className='divisaoFD'>
-                    <img src={telefone} alt="" />
-                    <p>+55 11 3900-1010 | 3995-6919</p>
-                </div>
-
-                <div className='divisaoFDN'>
-                    <h3>Redes Sociais</h3>
-                    <div>
-                        <img src={whats} alt="" />
-                        <img src={linkedin} alt="" />
-                        <img src={insta} alt="" />
-                    </div>
-                </div>
+                
             </div>
         </footer>
 
