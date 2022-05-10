@@ -104,6 +104,17 @@ margin-right: 20px;
 
 
 
+ .cima{
+
+
+    margin-top: 35px;
+    margin-bottom: 31px;
+    margin-left: 115px;
+
+
+  }
+
+
  .divisaoPrinc{
 
 
@@ -370,6 +381,7 @@ margin-right: 20px;
     height: 150px;
     width: 100%;
     border-top: 1px solid;
+    margin-top: 99px;
 
 }
 

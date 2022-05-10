@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import Login from './pages/login/teladeLogin'
-import ListaClientes from '../src/pages/funcionario/listaClientes'
+import Login from './pages/login/teladeLogin';
+import Home from './pages/Page_home/home'
+import ListaClientes from '../src/pages/funcionario/listaMeusClientes';
 import ListagemEquipamentos from './pages/testes/listaEquipamento'
-import CadastroCliente from './pages/funcionario/cadastroClientes'
+import CadastroCliente from './pages/administardor/cadastroClientes'
 import MeusEquipamentos from './pages/empresa/meusEquipamentos';
 import CadastroFuncionario from './pages/administardor/cadastroFuncionario';
 import App from './pages/empresa/listagemEquipamentos';
@@ -23,7 +24,8 @@ const Routing = (
   <Router>
     <div>
       <Routes>
-        <Route exact path="/" element={<Login/>}/>
+        <Route exact path="/" element={<Home/>}/>
+        <Route path="/login" element={<Login/>}/>
         <Route path="/ListaClientes" element={<ListaClientes/>}/>
         <Route path="/MeusEquipamentos" element={<MeusEquipamentos/>}/>
         <Route path="/cadastroCliente" element={<CadastroCliente/>}/>
