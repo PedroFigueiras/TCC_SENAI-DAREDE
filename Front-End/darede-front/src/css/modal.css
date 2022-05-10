@@ -47,7 +47,7 @@ padding-left: 40px;
 
 .vpc img{
 
-    margin-left: 102px;
+    margin-left: 81px;;
     margin-bottom: 10px;
 
 }
@@ -121,6 +121,14 @@ padding-left: 40px;
     width: 25px;
     height: 25px;
     margin-top: 48px;
+
+}
+
+.SAINDO{
+
+    width: 20px;
+    height: 20px;
+    margin-top: 28px;
 
 }
 

@@ -124,7 +124,7 @@ export default function Login() {
         //   this.props.history.push('/CadastroFuncionario');
         // }
 
-        navigate("/MeusEquipamentos")
+        navigate("/ListagemEquipamentos")
       },
       onFailure: (err) => {
         setLoading(false)

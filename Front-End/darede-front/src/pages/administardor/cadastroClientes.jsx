@@ -82,13 +82,13 @@ export default function Signup() {
 
 
         <div>
-            <header>
+             <header>
                 <div className='corFundoH'>
                     <img className='logo' src={Logo} alt="" />
                     <div className='nave'>
-                        <a href="">Cadastro Clientes</a>
-                        <a href="">Cadastro Funcionarios</a>
-                        <a href="">Listagem Clientes</a>
+                        <a href="/cadastroCliente">Cadastro Clientes</a>
+                        <a href="/CadastroFuncionario">Cadastro Funcionarios</a>
+                        <a href="/ListaClientes">Listagem Clientes</a>
                         <a href="">Listagem Funcionarios</a>
                         
                         <img onClick={Sair} className='sair' src={sair} alt="" />
@@ -198,11 +198,7 @@ export default function Signup() {
                     <img className='imagem_lado_d' src={boneco} alt="" />
                 </div> */}
             </div>
-            <footer className='corFundoF'>
-                <div className='divisaoF'>
-
-                </div>
-            </footer>
+            
         </div>
     );
 };

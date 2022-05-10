@@ -198,11 +198,7 @@ export default function Signup() {
                     <img className='imagem_lado_d' src={boneco} alt="" />
                 </div> */}
             </div>
-            <footer className='corFundoF'>
-                <div className='divisaoF'>
-
-                </div>
-            </footer>
+            
         </div>
     );
 };

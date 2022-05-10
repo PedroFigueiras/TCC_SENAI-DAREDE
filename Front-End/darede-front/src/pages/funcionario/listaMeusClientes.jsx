@@ -55,53 +55,6 @@ function App() {
             <div className='divisaoFundo'>
 
 
-                <div className='blocoInfo'>
-
-                    <div>
-                        <section className='posicaoI' >
-                            <img className='circuloFoto' src={Fake} alt="" />
-                        </section>
-
-                        <section className='selecaoLinhas'>
-
-
-                            <div className='linha'></div>
-
-                            <div >
-
-                                <div className='dividirLinha'>
-                                    <img className='iconeU' src={IconeUsuario} alt="" />
-                                    <h1>Dados Usuario</h1>
-                                </div>
-
-
-                                
-                                <div className='dividirLinha'>
-                                    <h3>Empresa:</h3> <p>Corinthians</p>
-                                </div>
-                                <div className='dividirLinha'>
-                                    <h3>email:</h3> <p>ti@corinthians.com</p>
-                                </div>
-                                <div className='dividirLinha'>
-                                    <h3>CNPJ:</h3> <p>131.213.421-89</p>
-                                </div>
-                                <div className='dividirLinha'>
-                                    <h3>CEL:</h3> <p>11 92134-1223</p>
-                                </div>
-                                
-
-                            </div>
-                        </section>
-
-                    </div>
-
-
-
-
-                </div>
-
-
-
                 <div className='boneco'>
                     <img src={boneco} alt="" />
                 </div>

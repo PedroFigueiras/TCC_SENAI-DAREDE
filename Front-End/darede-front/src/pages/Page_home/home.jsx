@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Modal_VPC from "../../components/Modal";
-import '../../css/empresa.css'
 import '../../css/home.css'
 import Fundo from '../../img/imgHome/fundo.png'
 import { Component } from 'react';
@@ -71,7 +70,7 @@ function Home() {
 
                 <div className="servicoshome">
 
-                    <div className="bloquinhos">
+                    <div className="bloquinhos2">
 
                         <div className="VPCHOME"></div>
                         <div className="EC2HOME"></div>
@@ -82,7 +81,7 @@ function Home() {
                     <div className="enviar_email">
                         <form action="">
                             <h4>REALIZAR ORÇAMENTO</h4>
-                            <p>Nome</p>
+                            <p>Empresa</p>
                             <input className="inputhome" type="text" />
                             <p>Telefone</p>
                             <input className="inputhome" type="tel" />
@@ -90,7 +89,7 @@ function Home() {
                             <input className="inputhome" type="email" />
                             <div className="divdiv">
                                 <div>
-                                    <p>Data</p>
+                                    <p>Data de Nascimento</p>
                                     <input className="datahome" type="date" />
                                 </div>
 
@@ -115,15 +114,23 @@ function Home() {
                     </div>
 
 
+
+
                 </div>
 
-                <footer className='corFundoF2'>
+                <footer className='corFundoF'>
 
-                </footer>
+                <div className='divisaoF'>
+
+                </div>
+            </footer>
 
             </div>
+            
 
         </div>
+
+
     );
 
 

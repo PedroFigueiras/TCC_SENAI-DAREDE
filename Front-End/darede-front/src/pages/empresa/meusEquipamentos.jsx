@@ -14,11 +14,12 @@ import insta from '../../img/imgCliente/instagram.png'
 import linkedin from '../../img/imgCliente/linkedin.png'
 import whats from '../../img/imgCliente/whats.png'
 import novo from '../../img/imgCliente/b_novo.png'
+import chatboot from '../../img/imgCliente/icone_chat.png'
 
 
 export default class meusEquipamentos extends Component {
 
-   
+
 
 
     render() {
@@ -33,11 +34,8 @@ export default class meusEquipamentos extends Component {
                         <div className='nave'>
                             <a href="/ListagemEquipamentos">Listar Equipamentos</a>
                             <a href="">Contato</a>
-                            <section className='imgHeader'>
-                                <img className='iconeUC' src={Fake} alt="" />
-                            </section>
                             <a href="/" target="principal" ><img className='sair' src={sair} alt="" /></a>
-                            
+
                         </div>
 
 
@@ -48,113 +46,57 @@ export default class meusEquipamentos extends Component {
 
                 </header>
                 <div className='divisaoPrinc'>
-                    <div className='divisaoFundo'>
 
 
-                        <div className='blocoInfo'>
+                    <div className='boneco2'>
+                        <img src={novo} alt="" />
+                    </div>
 
-                            <div>
-                                <section className='posicaoI' >
-                                    <img className='circuloFoto' src={Fake} alt="" />
-                                </section>
+                    <div className='blocoCentralPrincipal'>
 
-                                <section className='selecaoLinhas'>
-
-
-                                    <div className='linha'></div>
-
-                                    <div >
-
-                                        <div className='dividirLinha'>
-                                            <img className='iconeU' src={IconeUsuario} alt="" />
-                                            <h1>Dados Usuario</h1>
-                                        </div>
-
-
-                                        <div className='dividirLinha'>
-                                            <h3 >Nome:</h3> <p>Pedro</p>
-                                        </div>
-                                        <div className='dividirLinha'>
-                                            <h3>Empresa:</h3> <p>Corinthians</p>
-                                        </div>
-                                        <div className='dividirLinha'>
-                                            <h3>Nome:</h3> <p>ti@corinthians.com</p>
-                                        </div>
-                                        <div className='dividirLinha'>
-                                            <h3>CNPJ:</h3> <p>131.213.421-89</p>
-                                        </div>
-                                        <div className='dividirLinha'>
-                                            <h3>CEL:</h3> <p>11 92134-1223</p>
-                                        </div>
-                                        <div className='dividirLinha'>
-                                            <h3>TEL:</h3> <p>11 2752-2190</p>
-                                        </div>
-
-                                    </div>
-                                </section>
-
+                        <div>
+                            <div className='divisao'>
+                                <img src={prancheta} alt="" />
+                                <h1>MEUS EQUIPAMENTOS</h1>
                             </div>
 
 
+                            <div className='blocoCentral'>
+
+                                <section >
+                                    <img className='blcimg' src={VPC} alt="" />
+
+                                </section>
+
+                                <section className='informacoes'>
+                                    <h2>VPC</h2>
+                                    <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
+                                    <center>
+                                        <button className='botaoEC2'>
+                                            <p>Detalhes do Uso</p>
+                                        </button>
+
+                                    </center>
+                                </section>
 
 
-                        </div>
 
+                            </div>
 
+                            <div className='blocoCentral'>
+                                <section >
+                                    <img className='blcimg' src={EC2} alt="" />
+                                </section>
 
-                        <div className='boneco2'>
-                            <img src={novo} alt="" />
-                        </div>
-
-                        <div className='blocoCentralPrincipal'>
-
-                            <div>
-                                <div className='divisao'>
-                                    <img src={prancheta} alt="" />
-                                    <h1>MEUS EQUIPAMENTOS</h1>
-                                </div>
-
-
-                                <div className='blocoCentral'>
-
-                                    <section >
-                                        <img src={VPC} alt="" />
-
-                                    </section>
-
-                                    <section className='informacoes'>
-                                        <h2>VPC</h2>
-                                        <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
-                                        <center>
-                                            <button className='botaoEC2'>
-                                                <p>Detalhes do Uso</p>
-                                            </button>
-
-                                        </center>
-                                    </section>
-
-                                    <div className='bloquinho'></div>
-
-                                </div>
-
-                                <div className='blocoCentral'>
-                                    <section >
-                                        <img src={EC2} alt="" />
-                                    </section>
-
-                                    <section className='informacoes'>
-                                        <h2>EC2</h2>
-                                        <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
-                                        <center>
-                                            <button className='botaoEC2'>
-                                                <p>Detalhes do Uso</p>
-                                            </button>
-                                        </center>
-                                    </section>
-
-                                    <div className='bloquinho2'></div>
-
-                                </div>
+                                <section className='informacoes'>
+                                    <h2>EC2</h2>
+                                    <p>Amazon Elastic Compute Cloud é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações.</p>
+                                    <center>
+                                        <button className='botaoEC2'>
+                                            <p>Detalhes do Uso</p>
+                                        </button>
+                                    </center>
+                                </section>
 
 
 
@@ -162,20 +104,17 @@ export default class meusEquipamentos extends Component {
 
 
 
-
                         </div>
 
-                
+
+                    </div>
+                    <div>
+                        <img className='chat' src={chatboot} alt="" />
                     </div>
 
                 </div>
 
-                <footer className='corFundoF'>
 
-                    <div className='divisaoF'>
-                        
-                    </div>
-                </footer>
 
             </div>
         )

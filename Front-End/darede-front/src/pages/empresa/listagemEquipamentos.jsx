@@ -37,11 +37,8 @@ function App() {
                 <img className='logo' src={Logo} alt="" />
                 <div className='nave'>
                     <a href="/MeusEquipamentos">Meus Equipamentos</a>
-                    <a href="">Contato</a>
-                    <section className='imgHeader'>
-                        <img className='iconeUC' src={Fake} alt="" />
-                    </section>
-                    <a href="/" target="principal" ><img className='sair' src={sair} alt="" /></a>
+                    <a href="/">Home</a>
+                    <a href="/Login" target="principal" ><img className='sair' src={sair} alt="" /></a>
                 </div>
 
 
@@ -52,55 +49,7 @@ function App() {
 
         </header>
         <div className='divisaoPrinc2'>
-            <div className='divisaoFundo'>
-
-
-                <div className='blocoInfo'>
-
-                    <div>
-                        <section className='posicaoI' >
-                            <img className='circuloFoto' src={Fake} alt="" />
-                        </section>
-
-                        <section className='selecaoLinhas'>
-
-
-                            <div className='linha'></div>
-
-                            <div >
-
-                                <div className='dividirLinha'>
-                                    <img className='iconeU' src={IconeUsuario} alt="" />
-                                    <h1>Dados Usuario</h1>
-                                </div>
-
-
-                                
-                                <div className='dividirLinha'>
-                                    <h3>Empresa:</h3> <p>Corinthians</p>
-                                </div>
-                                <div className='dividirLinha'>
-                                    <h3>email:</h3> <p>ti@corinthians.com</p>
-                                </div>
-                                <div className='dividirLinha'>
-                                    <h3>CNPJ:</h3> <p>131.213.421-89</p>
-                                </div>
-                                <div className='dividirLinha'>
-                                    <h3>CEL:</h3> <p>11 92134-1223</p>
-                                </div>
-                                
-
-                            </div>
-                        </section>
-
-                    </div>
-
-
-
-
-                </div>
-
-
+           
 
                 <div className='boneco'>
                     <img src={boneco} alt="" />
@@ -118,7 +67,7 @@ function App() {
                         <div className='blocoCentral'>
 
                             <section >
-                                <img src={VPC} alt="" />
+                                <img className="blcimg" src={VPC} alt="" />
 
                             </section>
 
@@ -138,7 +87,7 @@ function App() {
 
                         <div className='blocoCentral'>
                             <section >
-                                <img src={EC2} alt="" />
+                                <img className="blcimg" src={EC2} alt="" />
                             </section>
 
                             <section className='informacoes'>
@@ -166,16 +115,9 @@ function App() {
                 <div>
                     <img className='chat' src={chatboot} alt="" />
                 </div>
-            </div>
+            
 
         </div>
-
-        <footer className='corFundoF'>
-
-            <div className='divisaoF'>
-                
-            </div>
-        </footer>
 
     </div>
     );

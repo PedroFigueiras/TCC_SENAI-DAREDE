@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/modal.css"
 import VPC2 from "../img/imgCliente/VPC.png"
-import Sair from "../img/imgCliente/sair.png"
+import Saindo from "../img/imgCliente/sair.png"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -18,9 +18,9 @@ const Modal_VPC = ({ onClose = () => { } }) => {
 
                     <div className="divisaoVPC">
 
-                        <div className="sair2">
+                        <div>
 
-                            <img onClick={onClose} src={Sair} />
+                            <img className="SAINDO" onClick={onClose} src={Saindo}></img>
 
                         </div>
 
@@ -44,7 +44,7 @@ const Modal_VPC = ({ onClose = () => { } }) => {
                     <div className="btns">
 
                         <button onClick={onClose}>Solicitar Orçamento</button>
-                        
+
 
                     </div>
 
@@ -55,7 +55,7 @@ const Modal_VPC = ({ onClose = () => { } }) => {
 
 
                 </div>
-                <ToastContainer/>
+                <ToastContainer />
 
             </div>
         </div>

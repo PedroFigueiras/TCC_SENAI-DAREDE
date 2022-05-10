@@ -19,9 +19,9 @@ const Modal_EC2 = ({ onClose = () => { } }) => {
 
                     <div className="divisaoEC2">
 
-                        <div className="sair22">
+                        <div>
 
-                            <img onClick={onClose} src={Sair} />
+                            <img className="SAINDO" onClick={onClose} src={Sair} />
 
                         </div>
 
