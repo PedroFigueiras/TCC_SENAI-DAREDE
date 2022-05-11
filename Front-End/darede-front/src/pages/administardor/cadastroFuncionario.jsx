@@ -88,7 +88,7 @@ export default function Signup() {
                     <div className='nave'>
                         <a href="/cadastroCliente">Cadastro Clientes</a>
                         <a href="/CadastroFuncionario">Cadastro Funcionarios</a>
-                        <a href="/ListaClientes">Listagem Clientes</a>
+                        <a href="/ListaCadastroClientes">Listagem Clientes</a>
                         <a href="">Listagem Funcionarios</a>
                         
                         <img onClick={Sair} className='sair' src={sair} alt="" />

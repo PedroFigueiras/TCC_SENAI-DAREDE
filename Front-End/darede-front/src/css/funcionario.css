@@ -176,9 +176,8 @@ margin-right: 20px;
 .boneco img{
 
     justify-content: flex-start;
-    width: 100px;
-    margin-top: 375px;
-    margin-left: 13vh;
+    width: 141px;
+    margin-top: 325px;
 
 }
 
@@ -328,4 +327,21 @@ margin-right: 20px;
 .LADO{
     margin-top: 19px;
     margin-left: 266px;
+}
+
+
+/* -----------------------TELA DE CADASTRO VPC--------------------------------- */
+
+.divisoesdaVPC{
+
+
+    display: flex;
+    margin-bottom: 20px;
+
+
+}
+.divisoesdaVPC2 {
+
+    margin-right: 5px;
+
 }

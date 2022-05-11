@@ -15,7 +15,7 @@ import UserPool from '../../components/UserPool'
 
 //custom:CPF custom:RG custom:ESTADO custom:CIDADE
 
-export default function Signup() {
+export default function CadastroEC2() {
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [nome, setNome] = useState("");
@@ -82,7 +82,7 @@ export default function Signup() {
 
 
         <div>
-              <header>
+            <header>
                 <div className='corFundoH'>
                     <img className='logo' src={Logo} alt="" />
                     <div className='nave'>
@@ -138,18 +138,43 @@ export default function Signup() {
                     </div> */}
                 </div>
                 <div className='Coluna_Linhas'>
-                    <h1 className='cima'>Cadatro de Clientes</h1>
+                    <h1 className='cima'>Cadatro de VPC</h1>
                     <form onSubmit={onSubmit}>
+                        <div className='divisoesdaVPC'>
 
-                        <p>EMPRESA:</p>
-                        <div className='parte1'>
-                            <label htmlFor="name"></label>
-                            <input value={nome} placeholder='ex: Scania Latim America' name='Nome' onChange={(event) => setNome(event.target.value)}></input>
+                            <p>Empresa:</p><br></br>
+                            <div className='divisoesdaVPC2'>
+                                <select name="" id="">
+
+                                    <option value="">Escolha uma das Opções</option>
+                                    <option value="">SCANIA</option>
+                                    <option value="">MERCEDES</option>
+                                    <option value="">BMW</option>
+                                    <option value="">CASAS BAHIA</option>
+
+                                </select>
+                            </div>
+
+                            <p>Funcionário:</p><br></br>
+                            <div className=''>
+                                <select name="" id="">
+
+                                    <option value="">Escolha uma das Opções</option>
+                                    <option value="">Carlos</option>
+                                    <option value="">Pedro</option>
+                                    <option value="">Makoto</option>
+                                    <option value="">Gabrielly</option>
+
+                                </select>
+                            </div>
+
                         </div>
+
+
 
                         <p>EMAIL:</p>
                         <label htmlFor="email"></label>
-                        <input type="email" placeholder='ex: email@email.com'  className='solitarioss'  name='Email' value={email} onChange={(event) => setEmail(event.target.value)}></input>
+                        <input type="email" placeholder='ex: email@email.com' className='solitarioss' name='Email' value={email} onChange={(event) => setEmail(event.target.value)}></input>
 
                         {/* <p>FUNCIONARIO:</p>
                         <label htmlFor="email"></label>
@@ -158,14 +183,14 @@ export default function Signup() {
 
                         <p>ENDEREÇO:</p>
                         <label htmlFor="address"></label>
-                        <input className='solitarioss'  placeholder='ex: Rua joao, 10 , SP' name='Endereco' value={endereco} onChange={(event) => setEndereco(event.target.value)}></input>
+                        <input className='solitarioss' placeholder='ex: Rua joao, 10 , SP' name='Endereco' value={endereco} onChange={(event) => setEndereco(event.target.value)}></input>
 
                         <div className='parte2'>
 
                             <div>
-                                <p>DATA ATUAL:</p>
+                                <p>DATA DE NASCIMENTO:</p>
                                 <label htmlFor="birthdate"></label>
-                                <input type="date"  value={nascimento} name='Data' onChange={(event) => setNascimento(event.target.value)}></input>
+                                <input type="date" value={nascimento} name='Data' onChange={(event) => setNascimento(event.target.value)}></input>
                             </div>
                         </div>
 
@@ -174,7 +199,7 @@ export default function Signup() {
                             <div>
                                 <p>CELULAR:</p>
                                 <label htmlFor="phone"></label>
-                                <input type="tel"  placeholder='ex: 5511999552288'  value={celular} name='Celular'  onChange={(event) => setCelular(event.target.value)}></input>
+                                <input type="tel" placeholder='ex: 5511999552288' value={celular} name='Celular' onChange={(event) => setCelular(event.target.value)}></input>
                             </div>
 
                         </div>
@@ -182,11 +207,11 @@ export default function Signup() {
                         <div>
                             <p>CRIAR SENHA:</p>
                             <label htmlFor="password"></label>
-                            <input type="password"  className='solitarioss'name='Senha' value={senha} onChange={(event) => setSenha(event.target.value)}></input>
+                            <input type="password" className='solitarioss' name='Senha' value={senha} onChange={(event) => setSenha(event.target.value)}></input>
                         </div>
 
                         <div>
-                            <button  type='submit' className='cadastrarbtn'>Cadatrar</button>
+                            <button type='submit' className='cadastrarbtn'>Cadatrar</button>
                             <button className='cancelarbtn' onClick={Limpar}>Cancelar</button>
                         </div>
 
@@ -200,7 +225,7 @@ export default function Signup() {
                     <img className='imagem_lado_d' src={boneco} alt="" />
                 </div> */}
             </div>
-            
+
         </div>
     );
 };
