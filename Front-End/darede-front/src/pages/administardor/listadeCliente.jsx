@@ -25,9 +25,7 @@ import axios from "axios";
 
 
 function ListaCadastroClientes() {
-
-    const [users, getUsers] = useState('');
-
+    const [users, getUsers] = useState([]);
     const url = 'https://sb92tpp6dl.execute-api.us-east-1.amazonaws.com/Prod/clientes'
 
     useEffect(() => {
@@ -37,17 +35,25 @@ function ListaCadastroClientes() {
     const listagemUsuarios = () => {
         axios.get(url)
             .then((res) => {
-                const listagememail = res.data.data.listagemdenomes;
+                const listagemnomes = res.data.data.listagemnomes;
+                getUsers(listagemnomes);
+                console.log(res)
+            })
+            .then((res1) => {
+                const listagememail = res1.data.data.listagememail;
                 getUsers(listagememail);
+                console.log(res1)
+            })
+            .then((res2) => {
+                const listagemcelular = res2.data.data.listagemcelular;
+                getUsers(listagemcelular);
+                console.log(res2)
             })
             .catch(error => console.error(`Erro: ${error}`));
-
     }
 
     return (
-
         <div>
-
             <header>
                 <div className='corFundoH'>
                     <img className='logo' src={Logo} alt="" />
@@ -58,109 +64,62 @@ function ListaCadastroClientes() {
                         <a href="/VPC">Cadastro VPC</a>
                         {/* <a href="/CadastroFuncionario">Cadastro Funcionarios</a>
                         <a href="">Listagem Funcionarios</a> */}
-
                         <img onClick={Sair} className='sair' src={sair} alt="" />
                     </div>
                 </div>
             </header>
             <div className='divisaoPrinc2'>
                 <div className='divisaoFundo'>
-
-
                     <div className='boneco'>
                         <img src={boneco} alt="" />
                     </div>
-
                     <div className='blocoCentralPrincipal'>
-
                         <div>
                             <div className='divisao'>
                                 <h1>Lista de Clientes</h1>
                             </div>
-
-
                             <div className='blocoCentral'>
-
-                                {/* {
-                                    users.map((consulta) => {
-
+                                {
+                                    users.map((res, res1, res2) => {
+                                        console.log(res)
                                         return (
-                                            <div key={consulta.Clientes}>
+                                            <div key={res.data}>
                                                 <div className="informacoes">
-
-                                                    <section  className="separacao" >
-                                                        
-
-
-                                                            <ul>
-
-                                                                <li>Nome:</li>
-                                                                <li>Email:</li>
-                                                                <li>Celuar:</li>
-
-
-                                                            </ul>
-
-                                                        
-
+                                                    <section className="separacao" >
+                                                        <ul>
+                                                            <li>Nome: {res} </li>
+                                                            <li>Email: {res1}</li>
+                                                            <li>Celuar: {res2}</li>
+                                                        </ul>
                                                     </section>
-
-
                                                 </div>
-
-
                                             </div>
                                         )
                                     })
-                                } */}
-
+                                }
                                 <section className='informacoes'>
-
-
                                     <ul>
-
                                         <li>Nome:</li>
                                         <li>Email:</li>
                                         <li>Celuar:</li>
-
-
                                     </ul>
                                 </section>
-
                             </div>
-
-
-
-
                         </div>
-
-
-
-
                     </div>
-
                     <div>
                         <img className='chat' src={chatboot} alt="" />
                     </div>
                 </div>
-
             </div>
-
             <footer className='corFundoF'>
-
                 <div className='divisaoF'>
-
                 </div>
             </footer>
-
         </div>
     );
-
-
 }
-
 export default ListaCadastroClientes
-
 
 {/* <div class="LARANJAO">
 
@@ -173,8 +132,6 @@ export default ListaCadastroClientes
 
                     <section className="lista">
                         <ul className="separacao">
-
-
                             <li>Paciente: {consulta.idPacienteNavigation.nomePaciente}</li>
                             <li>Médico: {consulta.idMedicoNavigation.nomeMedico} </li>
                             <li>Especialidade:{consulta.idMedicoNavigation.idEspecialidadeNavigation.nomeEspecialidade}</li>
@@ -184,20 +141,12 @@ export default ListaCadastroClientes
                             }).format(new Date(consulta.dataHora))}</li>
                             <li>Descrição:{consulta.descricao}</li>
                             <li>Situação:{consulta.idSituacaoNavigation.tipoSituacao}</li>
-
-
                         </ul>
-
                     </section>
-
-
                 </div>
-
-
             </div>
         )
     })
-
 }
 
 
