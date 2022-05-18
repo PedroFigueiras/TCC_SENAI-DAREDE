@@ -104,8 +104,8 @@ export default function Login() {
     user.authenticateUser(authDetails, {
       onSuccess: (data) => {
         setLoading(false)
-        console.log("onSuccess: ", data);
-
+        console.log("onSuccess: ", data.getIdToken().payload["cognito:groups"][0]);
+        
         var toke = "CognitoIdentityServiceProvider.1g36b2sqgdauaqc1ni5q6vel2b."+ UserPool.getCurrentUser().getUsername() +".idToken"
         console.log(TokenConvertido())
         
